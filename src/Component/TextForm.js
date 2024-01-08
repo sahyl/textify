@@ -127,7 +127,9 @@ export default function TextForm(props) {
               return element.length !== 0;
             }).length
           }{" "}
-          words and {text.length} characters
+          words and {text.split(/\s+/).filter((element) => {
+              return element.length !== 0;
+            }).length} characters
         </p>
         <p>
           {0.008 *
